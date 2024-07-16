@@ -11,32 +11,7 @@ import image9 from '../Assets/image9.jpg';
 // navbar
 export const Menutext = ['Home', 'Blog', 'Contact'];
 // trending
-export const content = [
-  {
-    img: `${Image}`,
-    tag: 'Technology',
-    title:
-      'The Impact of Technology on the Workplace: How Technology is Changing',
-  },
-  {
-    img: `${Image}`,
-    tag: 'Technology',
-    title:
-      'The Impact of Technology on the Workplace: How Technology is Changing',
-  },
-  {
-    img: `${Image}`,
-    tag: 'Technology',
-    title:
-      'The Impact of Technology on the Workplace: How Technology is Changing',
-  },
-  {
-    img: `${Image}`,
-    tag: 'Technology',
-    title:
-      'The Impact of Technology on the Workplace: How Technology is Changing',
-  },
-];
+export const content = ['', '', '', ''];
 // allblogpost
 export const AllBlogPostTag = [
   'All',
@@ -46,31 +21,32 @@ export const AllBlogPostTag = [
   'Technology',
   'Branding',
 ];
+
 export const AllBlogContent = [
   {
     img: `${image1}`,
     tag: 'Design',
     title:
       'The Impact of Technology on the Workplace: How Technology is Changing',
-    date: 'August 20, 2022',
+    date: 'August 20, 2023',
   },
   {
     img: `${image2}`,
     tag: 'Design',
     title:
       'The Impact of Technology on the Workplace: How Technology is Changing',
-    date: 'August 20, 2022',
+    date: 'August 20, 2024',
   },
   {
     img: `${image3}`,
-    tag: 'Design',
+    tag: 'Fashion',
     title:
       'The Impact of Technology on the Workplace: How Technology is Changing',
-    date: 'August 20, 2022',
+    date: 'August 20, 2021',
   },
   {
     img: `${image4}`,
-    tag: 'Design',
+    tag: 'Travel',
     title:
       'The Impact of Technology on the Workplace: How Technology is Changing',
     date: 'August 20, 2022',
@@ -84,28 +60,28 @@ export const AllBlogContent = [
   },
   {
     img: `${image6}`,
-    tag: 'Design',
+    tag: 'Branding',
     title:
       'The Impact of Technology on the Workplace: How Technology is Changing',
     date: 'August 20, 2022',
   },
   {
     img: `${image7}`,
-    tag: 'Design',
+    tag: 'Technology',
     title:
       'The Impact of Technology on the Workplace: How Technology is Changing',
     date: 'August 20, 2022',
   },
   {
     img: `${image8}`,
-    tag: 'Design',
+    tag: 'Travel',
     title:
       'The Impact of Technology on the Workplace: How Technology is Changing',
     date: 'August 20, 2022',
   },
   {
     img: `${image9}`,
-    tag: 'Design',
+    tag: 'Technology',
     title:
       'The Impact of Technology on the Workplace: How Technology is Changing',
     date: 'August 20, 2022',

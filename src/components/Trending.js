@@ -1,5 +1,5 @@
 import { Card } from './Card';
-import { content } from '../constants.js';
+import { AllBlogContent, content } from '../constants.js';
 
 export const Trending = () => {
   return (
@@ -8,8 +8,12 @@ export const Trending = () => {
         <p className="text-2xl font-bold ">Trending</p>
       </div>
       <div className="flex flex-row gap-5 text-[#ffffff]">
-        {content.map((el) => (
-          <Card image={el.img} tag={el.tag} title={el.title} />
+        {content.map((el, index) => (
+          <Card
+            image={AllBlogContent[index].img}
+            tag={AllBlogContent[index].tag}
+            title={AllBlogContent[index].title}
+          />
         ))}
       </div>
     </div>
