@@ -1,5 +1,6 @@
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from '../Assets/Image.png';
+
 export const Carousel = () => {
   return (
     <div className="flex justify-center">

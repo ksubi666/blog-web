@@ -1,6 +1,6 @@
 import { Search } from 'lucide-react';
 import Logo from '../Assets/Logo.png';
-const Menutext = ['Home', 'Blog', 'Contact'];
+import { Menutext } from '../constants.js';
 
 export const Navbar = () => {
   return (

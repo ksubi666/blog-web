@@ -1,31 +1,5 @@
 import { Card } from './Card';
-import Image from '../Assets/Image.png';
-const content = [
-  {
-    img: `${Image}`,
-    tag: 'Technology',
-    title:
-      'The Impact of Technology on the Workplace: How Technology is Changing',
-  },
-  {
-    img: `${Image}`,
-    tag: 'Technology',
-    title:
-      'The Impact of Technology on the Workplace: How Technology is Changing',
-  },
-  {
-    img: `${Image}`,
-    tag: 'Technology',
-    title:
-      'The Impact of Technology on the Workplace: How Technology is Changing',
-  },
-  {
-    img: `${Image}`,
-    tag: 'Technology',
-    title:
-      'The Impact of Technology on the Workplace: How Technology is Changing',
-  },
-];
+import { content } from '../constants.js';
 
 export const Trending = () => {
   return (

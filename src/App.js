@@ -1,5 +1,5 @@
 import './App.css';
-import { Carousel, Navbar, Trending } from './components';
+import { Allblogpost, Carousel, Navbar, Trending } from './components';
 
 function App() {
   return (
@@ -7,6 +7,7 @@ function App() {
       <Navbar />
       <Carousel />
       <Trending />
+      <Allblogpost />
     </div>
   );
 }
