@@ -1,4 +1,3 @@
-import Image from '../Assets/Image.png';
 import image1 from '../Assets/Image1.jpg';
 import image2 from '../Assets/image2.jpg';
 import image3 from '../Assets/image3.jpg';
@@ -26,8 +25,7 @@ export const AllBlogContent = [
   {
     img: `${image1}`,
     tag: 'Design',
-    title:
-      'The Impact of Technology on the Workplace: How Technology is Changing',
+    title: 'Grid system for better Design User Interface',
     date: 'August 20, 2023',
   },
   {
@@ -40,8 +38,7 @@ export const AllBlogContent = [
   {
     img: `${image3}`,
     tag: 'Fashion',
-    title:
-      'The Impact of Technology on the Workplace: How Technology is Changing',
+    title: 'Grid system for better Design User Interface',
     date: 'August 20, 2021',
   },
   {
@@ -49,21 +46,19 @@ export const AllBlogContent = [
     tag: 'Travel',
     title:
       'The Impact of Technology on the Workplace: How Technology is Changing',
-    date: 'August 20, 2022',
+    date: 'August 23, 2020',
   },
   {
     img: `${image5}`,
     tag: 'Design',
-    title:
-      'The Impact of Technology on the Workplace: How Technology is Changing',
-    date: 'August 20, 2022',
+    title: 'Grid system for better Design User Interface',
+    date: 'August 20, 2023',
   },
   {
     img: `${image6}`,
     tag: 'Branding',
-    title:
-      'The Impact of Technology on the Workplace: How Technology is Changing',
-    date: 'August 20, 2022',
+    title: 'Grid system for better Design User Interface',
+    date: 'August 20, 2024',
   },
   {
     img: `${image7}`,
@@ -75,15 +70,14 @@ export const AllBlogContent = [
   {
     img: `${image8}`,
     tag: 'Travel',
-    title:
-      'The Impact of Technology on the Workplace: How Technology is Changing',
-    date: 'August 20, 2022',
+    title: 'Grid system for better Design User Interface',
+    date: 'August 20, 2018',
   },
   {
     img: `${image9}`,
     tag: 'Technology',
     title:
       'The Impact of Technology on the Workplace: How Technology is Changing',
-    date: 'August 20, 2022',
+    date: 'August 20, 2019',
   },
 ];

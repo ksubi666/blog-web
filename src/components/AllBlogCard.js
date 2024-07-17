@@ -1,6 +1,6 @@
 export const AllBlogCard = (props) => {
   return (
-    <div className="w-[392px] flex p-4 flex-col justify-center items-center gap-4 border-[1px] border-[#E8E8EA] rounded-xl ">
+    <div className="w-[392px] flex p-4 flex-col justify-between items-center gap-4 border-[1px] border-[#E8E8EA] rounded-xl ">
       <img
         src={`${props.img}`}
         alt={`${props.img}`}

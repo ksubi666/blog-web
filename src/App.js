@@ -1,5 +1,6 @@
 import './App.css';
 import { Allblogpost, Carousel, Navbar, Trending } from './components';
+import Image from './Assets/Image.png';
 
 function App() {
   return (

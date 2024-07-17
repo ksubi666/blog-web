@@ -6,7 +6,7 @@ export const Allblogpost = () => {
     <div className="flex flex-col items-center gap-8">
       <div className="flex flex-col w-[1216px] gap-8 text-[#495057] font-bold">
         <h1>All Blog Post</h1>
-        <div className="flex gap-5">
+        <div className="flex gap-5 [&>*:first-child]:text-[#D4A373]">
           {AllBlogPostTag.map((el) => (
             <p>{el}</p>
           ))}
