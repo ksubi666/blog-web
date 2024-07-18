@@ -3,7 +3,7 @@ import { Tag } from './Tag';
 export const CarouselContent = ({ img, tag, title, date }) => {
   const carouselStyles = {
     container:
-      'min-w-[1200px] min-h-[600px] relative flex flex-col justify-end bg-[#141624] bg-opacity-40 rounded-[12px]',
+      'min-w-[1200px] min-h-[600px] relative flex flex-col justify-end bg-[#141624] bg-opacity-40 rounded-xl',
     img: 'absolute w-[1200px] h-[600px] top-0 left-0 -z-10 rounded-[12px] bg-no-repeat object-center object-cover',
     content:
       'p-10 border-solid border-[1px] border-[#E8E8EA] max-w-[598px] bg-white rounded-xl ml-[11px] mb-[13px]',
