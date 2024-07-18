@@ -1,19 +1,26 @@
 import { Search } from 'lucide-react';
 import Logo from '../Assets/Logo.png';
 import { Menutext } from '../constants.js';
-
+const styles = {
+  container: 'flex py-8 px-[350px] w-[1917px] items-start',
+  navbarContainer: 'flex gap-[118px]',
+  menu: 'flex gap-10 w-[667px] justify-center items-center mr-[21px]',
+  inputContainer:
+    'flex py-2 pr-2 pl-4 bg-[#F4F4F5] rounded-[5px] items-center w-[166px] gap-3',
+  input: 'bg-[#F4F4F5] w-[114px] text-sm font-normal leading-5',
+};
 export const Navbar = () => {
   return (
-    <div className="flex justify-center text-[#3B3C4A]">
-      <div className="flex justify-between py-8 w-[1217px] gap-[21px] items-center">
-        <img src={Logo} alt="Logo"></img>
-        <div className="flex gap-10">
+    <div className={styles.container}>
+      <div className={styles.navbarContainer}>
+        <img src={Logo} alt="Logo" className="w-[158px] h-[36px]"></img>
+        <div className={styles.menu}>
           {Menutext.map((el) => (
             <p>{el}</p>
           ))}
         </div>
-        <div className="flex py-2 pr-2 pl-4 bg-[#F4F4F5] rounded-[5px] items-center justify-center">
-          <input placeholder="Search" className="bg-[#F4F4F5] w-[114px]" />
+        <div className={styles.inputContainer}>
+          <input placeholder="Search" className={styles.input} />
           <Search size={16} />
         </div>
       </div>

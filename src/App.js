@@ -1,10 +1,10 @@
 import './App.css';
 import { Allblogpost, Carousel, Navbar, Trending } from './components';
-import Image from './Assets/Image.png';
+const styles = { container: 'flex flex-col items-center gap-[100px]' };
 
 function App() {
   return (
-    <div className="flex flex-col gap-[100px]">
+    <div className={styles.container}>
       <Navbar />
       <Carousel />
       <Trending />
