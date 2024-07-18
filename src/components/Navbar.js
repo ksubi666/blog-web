@@ -2,7 +2,7 @@ import { Search } from 'lucide-react';
 import Logo from '../Assets/Logo.png';
 import { Menutext } from '../constants.js';
 const styles = {
-  container: 'flex py-8 px-[350px] w-[1917px] items-start',
+  container: 'flex py-8 items-start w-[1130px]',
   navbarContainer: 'flex gap-[118px]',
   menu: 'flex gap-10 w-[667px] justify-center items-center mr-[21px]',
   inputContainer:

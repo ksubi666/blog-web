@@ -2,19 +2,19 @@ import { contactData } from '../constants.js';
 import { ContactCard } from './ContactCard';
 import { Footer } from './Footer';
 import { Navbar } from './Navbar';
+
 const styles = {
-  container: 'flex flex-col items-center gap-[100px]',
+  container: 'flex flex-col items-center gap-[100px] h-full',
   text: 'text-[#696A75] font-base font-normal leading-6',
+  input:
+    'w-[225px] h-[38px] py-[14px] pr-[14px] pl-[20px] items-center flex gap-3 flex-shrink-0 border-[1px] border-[#DCDDDF] outline-none',
 };
 export const Contact = () => {
   return (
     <div className={styles.container}>
       <Navbar />
       <div className="flex flex-col ">
-        <div
-          className="flex flex-col w-[769px] h-[389px] items-center py-[10px] pt-[14px]
-        gap-5 flex-shrink-0"
-        >
+        <div className="flex flex-col w-[643px] h-[389px] items-center py-[10px] pt-[14px] gap-5 flex-shrink-0">
           <div className="flex flex-col gap-5">
             <h2 className="text-4xl font-semibold leading-10 ">Contact Us</h2>
             <p className={`w-[624px] h-[103px] ${styles.text}`}>
@@ -31,18 +31,36 @@ export const Contact = () => {
             ))}
           </div>
         </div>
-        <div className="flex pt-[29px] pr-[130px] pb-[26px] pl-[35px]">
+        <div className="flex flex-col pt-[29px] pr-[130px] pb-[26px] pl-[35px] gap-5 bg-[#F6F6F7] rounded-[10px]">
           <div>
-            <h2>Leave a Message</h2>
+            <h2 className="text-2xl font-bold leading-10 mb-1 ">
+              Leave a Message
+            </h2>
           </div>
-          <div>
-            <div>
-              <input placeholder="Your Name" />
-              <input placeholder="Your Email" />
+          <div className="flex flex-col items-start gap-5">
+            <div className="flex gap-[28px]">
+              <input className={styles.input} placeholder="Your Name" />
+              <input className={styles.input} placeholder="Your Email" />
             </div>
-            <input placeholder="Subject" />
-            <input placeholder="Write a message" />
-            <button>Send</button>
+            <div className="flex flex-col gap-5">
+              <input
+                className="w-[478px] h-[35px] py-[10px] pt-[14px]
+        pl-5 border-[1px] border-[#DCDDDF] gap-3 items-center flex-shrink-0 outline-none"
+                placeholder="Subject"
+              />
+              <div
+                className="w-[478px] h-[134px] py-[10px] pt-[14px]
+        pl-5 border-[1px] bg-[#fff] border-[#DCDDDF] flex items-start gap-3 flex-shrink-0"
+              >
+                <input
+                  className="outline-none "
+                  placeholder="Write a message"
+                />
+              </div>
+            </div>
+            <button className="py-[10px] px-[16px] rounded-md  w-fit  text-[12px] bg-[#4B6BFB] text-white mt-[19px]">
+              Send Message
+            </button>
           </div>
         </div>
       </div>

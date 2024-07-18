@@ -17,8 +17,11 @@ function App() {
       <Carousel />
       <Trending />
       <Allblogpost />
-      <Footer /> */}
+      <div className="relative w-full mt-[480px]">
+        <Footer />
+      </div> */}
       <Contact />
+      {/* <Error /> */}
     </div>
   );
 }

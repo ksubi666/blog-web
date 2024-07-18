@@ -19,18 +19,18 @@ export const AllBlogCard = ({ img, tag, title, date, autorImg, autorName }) => {
           <h1 className={styles.title}>{title}</h1>
         </div>
         <div className="flex items-center gap-5">
-          <div className="items-center gap-3">
-            {autorImg ? (
+          {autorImg ? (
+            <div className=" flex items-center gap-3">
               <img
                 src={autorImg}
                 alt="AutorImg"
                 className="size-9 rounded-full"
               ></img>
-            ) : null}
-            <p className="text-base font-medium leading-6 text-[#97989F]">
-              {autorName}
-            </p>
-          </div>
+              <p className="text-base font-medium leading-6 text-[#97989F]">
+                {autorName}
+              </p>
+            </div>
+          ) : null}
           <p className={styles.date}>{date}</p>
         </div>
       </div>
