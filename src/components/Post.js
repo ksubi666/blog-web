@@ -1,7 +1,7 @@
 import { Tag } from './Tag';
 const styles = {
   container:
-    'w-[392px] flex p-4 flex-col justify-between items-center gap-4 border-[1px] border-[#E8E8EA] rounded-xl ',
+    'w-[392px] flex p-4 flex-col justify-between items-center gap-4 border-[1px] border-[#E8E8EA] rounded-xl cursor-pointer',
   img: 'w-[360px] h-[240px] object-cover object-center rounded-md',
   content: 'p-2 flex flex-col gap-4 self-stretch items-start',
   contentText: 'flex flex-col items-start gap-4 self-stretch',
@@ -11,7 +11,7 @@ const styles = {
   autorName: 'text-base font-medium leading-6 text-[#97989F]',
 };
 
-export const AllBlogCard = ({ img, tag, title, date, autorImg, autorName }) => {
+export const Post = ({ img, tag, title, date, autorImg, autorName }) => {
   return (
     <div className={styles.container}>
       <img src={`${img}`} alt={`${img}`} className={styles.img}></img>

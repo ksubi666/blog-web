@@ -1,16 +1,22 @@
 import './App.css';
-import {
-  AllBlogPostPage,
-  ContactPage,
-  ErrorPage,
-  HomePage,
-} from './components';
+import { ContactPage, ErrorPage, HomePage } from './components';
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BasicLayout } from './layout/BasicLayout';
+import { AllBlogPost } from './components/AllBlogPost';
+
 function App() {
   return (
-    <HomePage />
-    // <ContactPage />
-    // <ErrorPage />
-    // <AllBlogPostPage />
+    <BrowserRouter>
+      <BasicLayout>
+        <Routes>
+          <Route path="/Home" element={<HomePage />}></Route>
+          <Route path="/Blog" element={<AllBlogPost />}></Route>
+          <Route path="/Contact" element={<ContactPage />}></Route>
+          <Route path="*" element={<ErrorPage />}></Route>
+        </Routes>
+      </BasicLayout>
+    </BrowserRouter>
   );
 }
 

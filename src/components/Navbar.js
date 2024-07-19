@@ -1,6 +1,7 @@
 import { Search } from 'lucide-react';
 import Logo from '../Assets/Logo.png';
 import { Menutext } from '../constants.js';
+import { Link } from 'react-router-dom';
 const styles = {
   container: 'flex py-8 items-start w-[1130px]',
   navbarContainer: 'flex gap-[118px]',
@@ -16,7 +17,9 @@ export const Navbar = () => {
         <img src={Logo} alt="Logo" className="w-[158px] h-[36px]"></img>
         <div className={styles.menu}>
           {Menutext.map((el) => (
-            <p>{el}</p>
+            <Link to={`/${el}`}>
+              <p>{el}</p>
+            </Link>
           ))}
         </div>
         <div className={styles.inputContainer}>

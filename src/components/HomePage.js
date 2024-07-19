@@ -1,15 +1,13 @@
 import { AllBlogPostTag } from '../constants.js';
-import { BasicLayout } from '../layout/BasicLayout';
-import { Allblogpost } from './AllBlogPost';
 import { Carousel } from './Carousel';
 import { Trending } from './Trending';
-
+import { AllBlogPost } from './AllBlogPost.js';
 export const HomePage = () => {
   return (
-    <BasicLayout>
+    <div className="flex flex-col items-center gap-[100px]">
       <Carousel />
       <Trending />
-      <Allblogpost postTag={AllBlogPostTag} />
-    </BasicLayout>
+      <AllBlogPost postTag={AllBlogPostTag} />
+    </div>
   );
 };
