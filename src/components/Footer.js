@@ -9,7 +9,7 @@ import {
 } from '../constants.js';
 const styles = {
   container:
-    'flex flex-col items-center absolute bottom-0 gap-[25px] bg-[#F6F6F7] w-full pt-[64px] border-t-[1px] border-[#E8E8EA]',
+    'flex flex-col items-center gap-[25px] bg-[#F6F6F7] w-full pt-[64px] border-t-[1px] border-[#E8E8EA]',
   aboutContainer: 'flex w-[1215px] items-start gap-5',
   about: 'w-[298px] flex-col items-start gap-6 flex-shrink-0',
   menu: 'flex flex-col justify-center items-start gap-[8px] flex-shrink-0 gap-[8px] text-[#3B3C4A] font-base font-normal leading-6 mb-1',
@@ -52,9 +52,14 @@ export const Footer = () => {
         <div className="flex gap-[10px]">
           {logosvg}
           <div>
-            <h2 className="text-xl text-[#141624] leading-7 font-extrabold">
-              MetaBlog
-            </h2>
+            <div className="flex">
+              <h2 className="text-xl text-[#141624] leading-7 font-normal">
+                Meta
+              </h2>
+              <h2 className="text-xl text-[#141624] leading-7 font-extrabold">
+                Blog
+              </h2>
+            </div>
             <p className={stylestext.text2}>© All Rights Reserved.</p>
           </div>
         </div>

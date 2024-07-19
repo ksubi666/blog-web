@@ -7,6 +7,8 @@ const styles = {
   contentText: 'flex flex-col items-start gap-4 self-stretch',
   title: 'text-[#181A2A] font-semibold text-2xl leading-7',
   date: 'text-[#97989F] text-base font-normal leading-6',
+  autorimg: 'size-9 rounded-full object-cover object-center',
+  autorName: 'text-base font-medium leading-6 text-[#97989F]',
 };
 
 export const AllBlogCard = ({ img, tag, title, date, autorImg, autorName }) => {
@@ -24,11 +26,9 @@ export const AllBlogCard = ({ img, tag, title, date, autorImg, autorName }) => {
               <img
                 src={autorImg}
                 alt="AutorImg"
-                className="size-9 rounded-full"
+                className={styles.autorimg}
               ></img>
-              <p className="text-base font-medium leading-6 text-[#97989F]">
-                {autorName}
-              </p>
+              <p className={styles.autorName}>{autorName}</p>
             </div>
           ) : null}
           <p className={styles.date}>{date}</p>

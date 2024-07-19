@@ -1,18 +1,16 @@
-import { contactData } from '../constants.js';
-import { ContactCard } from './ContactCard';
-import { Footer } from './Footer';
-import { Navbar } from './Navbar';
+import { contactData } from '../constants.js/index.js';
+import { BasicLayout } from '../layout/BasicLayout.jsx';
+import { ContactCard } from './ContactCard.js';
 
 const styles = {
   container: 'flex flex-col items-center gap-[100px] h-full',
   text: 'text-[#696A75] font-base font-normal leading-6',
   input:
-    'w-[225px] h-[38px] py-[14px] pr-[14px] pl-[20px] items-center flex gap-3 flex-shrink-0 border-[1px] border-[#DCDDDF] outline-none',
+    'w-[225px] h-[38px] py-[14px] pr-[14px] pl-[20px] items-center flex gap-3 flex-shrink-0 border-[1px] border-[#DCDDDF] outline-none rounded-[5px]',
 };
-export const Contact = () => {
+export const ContactPage = () => {
   return (
-    <div className={styles.container}>
-      <Navbar />
+    <BasicLayout>
       <div className="flex flex-col ">
         <div className="flex flex-col w-[643px] h-[389px] items-center py-[10px] pt-[14px] gap-5 flex-shrink-0">
           <div className="flex flex-col gap-5">
@@ -45,17 +43,14 @@ export const Contact = () => {
             <div className="flex flex-col gap-5">
               <input
                 className="w-[478px] h-[35px] py-[10px] pt-[14px]
-        pl-5 border-[1px] border-[#DCDDDF] gap-3 items-center flex-shrink-0 outline-none"
+        pl-5 border-[1px] border-[#DCDDDF] gap-3 items-center flex-shrink-0 outline-none rounded-[5px]"
                 placeholder="Subject"
               />
               <div
                 className="w-[478px] h-[134px] py-[10px] pt-[14px]
-        pl-5 border-[1px] bg-[#fff] border-[#DCDDDF] flex items-start gap-3 flex-shrink-0"
+        pl-5 border-[1px] bg-[#fff] border-[#DCDDDF] flex items-start gap-3 flex-shrink-0 rounded-[5px]"
               >
-                <input
-                  className="outline-none "
-                  placeholder="Write a message"
-                />
+                <input className="outline-none" placeholder="Write a message" />
               </div>
             </div>
             <button className="py-[10px] px-[16px] rounded-md  w-fit  text-[12px] bg-[#4B6BFB] text-white mt-[19px]">
@@ -64,7 +59,6 @@ export const Contact = () => {
           </div>
         </div>
       </div>
-      <Footer />
-    </div>
+    </BasicLayout>
   );
 };

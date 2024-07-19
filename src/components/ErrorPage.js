@@ -1,14 +1,13 @@
-import { Footer } from './Footer';
-import { Navbar } from './Navbar';
+import { BasicLayout } from '../layout/BasicLayout';
+
 const styles = {
   container: 'flex flex-col items-center gap-[100px]',
   text: 'text-[#696A75] font-base font-normal leading-6 mb-6',
 };
 
-export const Error = () => {
+export const ErrorPage = () => {
   return (
-    <div className={styles.container}>
-      <Navbar />
+    <BasicLayout>
       <div className="flex w-[642px] h-[208px] justify-center items-center gap-8">
         <h1 className="text-7xl">404</h1>
         <span className="border-r-[1px] h-[156px] border-[#E8E8EA]"></span>
@@ -25,7 +24,6 @@ export const Error = () => {
           </button>
         </div>
       </div>
-      <Footer />
-    </div>
+    </BasicLayout>
   );
 };

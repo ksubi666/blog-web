@@ -1,6 +1,6 @@
-import { ImageDown } from 'lucide-react';
 import { AllBlogContent, AllBlogPostTag } from '../constants.js';
 import { AllBlogCard } from './AllBlogCard';
+import { LoadMore } from './LoadMore.js';
 const styles = {
   conatiner: 'flex flex-col items-center gap-8',
   textContainer:
@@ -10,21 +10,27 @@ const styles = {
   postContainer: 'flex flex-wrap w-[1216px] gap-5',
 };
 
-export const Allblogpost = () => {
+export const Allblogpost = ({ postTag }) => {
   return (
     <div className={styles.conatiner}>
       <div className={styles.textContainer}>
         <h1 className={styles.header}>All Blog Post</h1>
-        <div className="flex gap-5 [&>*:first-child]:text-[#D4A373]">
-          {AllBlogPostTag.map((el) => (
-            <p className={styles.tag}>{el}</p>
-          ))}
-          <p className={`w-[100%]  text-right ${styles.tag}`}>View All</p>
-        </div>
+        {postTag ? (
+          <div className="flex gap-5 [&>*:first-child]:text-[#D4A373]">
+            {postTag.map((el) => (
+              <p className={styles.tag}>{el}</p>
+            ))}
+            <p className={`w-[100%]  text-right ${styles.tag}`}>View All</p>
+          </div>
+        ) : null}
       </div>
       <div className={styles.postContainer}>
         {AllBlogContent.map((el) => (
           <AllBlogCard
+            autorImg={
+              'https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg'
+            }
+            autorName={'aksjdakjs ask'}
             img={el.img}
             tag={el.tag}
             title={el.title}
@@ -32,6 +38,7 @@ export const Allblogpost = () => {
           />
         ))}
       </div>
+      <LoadMore />
     </div>
   );
 };
