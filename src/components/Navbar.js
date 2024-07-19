@@ -3,7 +3,7 @@ import Logo from '../Assets/Logo.png';
 import { Menutext } from '../constants.js';
 import { Link } from 'react-router-dom';
 const styles = {
-  container: 'flex py-8 items-start w-[1130px]',
+  container: 'flex py-8 items-start max-w-[1130px]',
   navbarContainer: 'flex gap-[118px]',
   menu: 'flex gap-10 w-[667px] justify-center items-center mr-[21px]',
   inputContainer:
@@ -14,8 +14,8 @@ export const Navbar = () => {
   return (
     <div className={styles.container}>
       <div className={styles.navbarContainer}>
-        <Link to="/Home" className="w-[158px] h-[36px]">
-          <img src={Logo} alt="Logo" className="w-[158px] h-[36px]"></img>
+        <Link to="/Home">
+          <img src={Logo} alt="Logo"></img>
         </Link>
         <div className={styles.menu}>
           {Menutext.map((el) => (
