@@ -34,8 +34,9 @@ export const AllBlogPost = ({ postTag }) => {
         </div>
       ) : (
         <div className={styles.postContainer}>
-          {AllBlogContent.map((el) => (
+          {AllBlogContent.map((el, index) => (
             <Post
+              key={index}
               autorImg="https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg"
               autorName="hello bat"
               img={el.img}

@@ -8,3 +8,5 @@ export * from './ContactPage';
 export * from './LoadMore';
 export * from './ErrorPage';
 export * from './HomePage';
+export * from './AllBlogPost';
+export * from './BlogPost';

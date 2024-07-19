@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Tag } from './Tag';
 const styles = {
   container:
@@ -13,7 +14,7 @@ const styles = {
 
 export const Post = ({ img, tag, title, date, autorImg, autorName }) => {
   return (
-    <div className={styles.container}>
+    <Link to="/BlogPost" className={styles.container}>
       <img src={`${img}`} alt={`${img}`} className={styles.img}></img>
       <div className={styles.content}>
         <div className={styles.contentText}>
@@ -34,6 +35,6 @@ export const Post = ({ img, tag, title, date, autorImg, autorName }) => {
           <p className={styles.date}>{date}</p>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
