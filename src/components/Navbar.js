@@ -14,7 +14,9 @@ export const Navbar = () => {
   return (
     <div className={styles.container}>
       <div className={styles.navbarContainer}>
-        <img src={Logo} alt="Logo" className="w-[158px] h-[36px]"></img>
+        <Link to="/Home" className="w-[158px] h-[36px]">
+          <img src={Logo} alt="Logo" className="w-[158px] h-[36px]"></img>
+        </Link>
         <div className={styles.menu}>
           {Menutext.map((el) => (
             <Link to={`/${el}`}>
