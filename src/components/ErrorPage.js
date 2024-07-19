@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const styles = {
   container: 'flex flex-col items-center gap-[100px]',
   text: 'text-[#696A75] font-base font-normal leading-6 mb-6',
@@ -16,9 +18,11 @@ export const ErrorPage = () => {
           We're sorry, This page is unknown or does not exist the page you are
           looking for.
         </p>
-        <button className="flex py-[10px] px-[16px] justify-center items-center bg-[#4B6BFB] rounded-[6px] text-[#fff] w-fit">
-          Back To Home
-        </button>
+        <Link to="/Home">
+          <button className="flex py-[10px] px-[16px] justify-center items-center bg-[#4B6BFB] rounded-[6px] text-[#fff] w-fit">
+            Back To Home
+          </button>
+        </Link>
       </div>
     </div>
   );
