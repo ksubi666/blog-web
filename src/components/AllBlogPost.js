@@ -26,18 +26,27 @@ export const AllBlogPost = ({ postTag }) => {
           </div>
         ) : null}
       </div>
-      <div className={styles.postContainer}>
-        {AllBlogContent.map((el) => (
-          <Post
-            autorImg="https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg"
-            autorName="hello bat"
-            img={el.img}
-            tag={el.tag}
-            title={el.title}
-            date={el.date}
-          />
-        ))}
-      </div>
+      {postTag ? (
+        <div className={styles.postContainer}>
+          {AllBlogContent.map((el) => (
+            <Post img={el.img} tag={el.tag} title={el.title} date={el.date} />
+          ))}
+        </div>
+      ) : (
+        <div className={styles.postContainer}>
+          {AllBlogContent.map((el) => (
+            <Post
+              autorImg="https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg"
+              autorName="hello bat"
+              img={el.img}
+              tag={el.tag}
+              title={el.title}
+              date={el.date}
+            />
+          ))}
+        </div>
+      )}
+
       <LoadMore />
     </div>
   );

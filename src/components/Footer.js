@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import {
   CopyrightText,
   Menutext,
@@ -12,7 +13,7 @@ const styles = {
     'flex flex-col items-center gap-[25px] bg-[#F6F6F7] w-full pt-[64px] border-t-[1px] border-[#E8E8EA]',
   aboutContainer: 'flex w-[1215px] items-start gap-5',
   about: 'w-[298px] flex-col items-start gap-6 flex-shrink-0',
-  menu: 'flex flex-col justify-center items-start gap-[8px] flex-shrink-0 gap-[8px] text-[#3B3C4A] font-base font-normal leading-6 mb-1',
+  menu: 'flex flex-col justify-center items-start gap-[8px] flex-shrink-0 gap-[8px] text-[#3B3C4A] font-base font-normal leading-6 mb-1 ',
 };
 const stylestext = {
   text1: 'text-[#696A75] font-base font-normal leading-6 mb-6',
@@ -37,11 +38,13 @@ export const Footer = () => {
         <div className="flex justify-center w-[512px] ">
           <div className={styles.menu}>
             {Menutext.map((el) => (
-              <p>{el}</p>
+              <Link to={`/${el}`}>
+                <p className="cursor-pointer hover:font-semibold">{el}</p>
+              </Link>
             ))}
           </div>
         </div>
-        <div className="flex w-[144px] h-4 flex-shrink-0 gap-[26px]">
+        <div className="flex w-[144px] h-4 flex-shrink-0 gap-[26px] cursor-pointer">
           {facebooksvg}
           {twittersvg}
           {instagramsvg}
@@ -63,7 +66,7 @@ export const Footer = () => {
             <p className={stylestext.text2}>© All Rights Reserved.</p>
           </div>
         </div>
-        <div className="flex">
+        <div className="flex cursor-pointer ">
           {CopyrightText.map((el) => (
             <p
               className={`border-r-[1px] last:border-none px-4 ${stylestext.text2}`}

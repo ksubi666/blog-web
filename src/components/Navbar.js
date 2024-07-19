@@ -18,7 +18,7 @@ export const Navbar = () => {
         <div className={styles.menu}>
           {Menutext.map((el) => (
             <Link to={`/${el}`}>
-              <p>{el}</p>
+              <p className="hover:font-medium">{el}</p>
             </Link>
           ))}
         </div>
