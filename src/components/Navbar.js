@@ -1,9 +1,9 @@
 import { Search } from 'lucide-react';
 import Logo from '../Assets/Logo.png';
-import { AllBlogContent, AllBlogPostTag, Menutext } from '../constants.js';
+import { AllBlogPostTag, Menutext } from '../constants.js';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import { AllBlogPost } from './AllBlogPost.js';
+
 const styles = {
   container: 'flex py-8 items-start max-w-[1130px]',
   navbarContainer: 'flex gap-[118px]',

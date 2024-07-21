@@ -15,6 +15,7 @@ function App() {
     <BrowserRouter>
       <BasicLayout>
         <Routes>
+          <Route path="/" element={<HomePage />}></Route>
           <Route path="/Home" element={<HomePage />}></Route>
           <Route path="/Blog" element={<AllBlogPost />}></Route>
           <Route path="/Contact" element={<ContactPage />}></Route>

@@ -13,6 +13,10 @@ const styles = {
 };
 
 export const AllBlogPost = ({ postTag }) => {
+  const Click = () => {
+    console.log('hello');
+  };
+
   return (
     <div className={styles.conatiner}>
       <div className={styles.textContainer}>
@@ -20,7 +24,9 @@ export const AllBlogPost = ({ postTag }) => {
         {postTag ? (
           <div className="flex gap-5 [&>*:first-child]:text-[#D4A373] cursor-pointer">
             {postTag.map((el) => (
-              <p className={styles.tag}>{el}</p>
+              <p className={styles.tag} onClick={Click}>
+                {el}
+              </p>
             ))}
             <p className={`w-[100%]  text-right ${styles.tag}`}>View All</p>
           </div>
