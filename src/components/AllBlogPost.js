@@ -44,7 +44,7 @@ export const AllBlogPost = ({ postTag }) => {
             <Post
               key={index}
               autorImg="https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg"
-              autorName="hello bat"
+              autorName="Hello World"
               img={el.img}
               tag={el.tag}
               title={el.title}
@@ -53,8 +53,7 @@ export const AllBlogPost = ({ postTag }) => {
           ))}
         </div>
       )}
-
-      <LoadMore />
+      {postTag ? <LoadMore /> : <></>}
     </div>
   );
 };

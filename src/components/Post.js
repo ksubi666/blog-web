@@ -21,7 +21,7 @@ export const Post = ({ img, tag, title, date, autorImg, autorName }) => {
           <Tag tag={tag} isPrimary={false} />
           <h1 className={styles.title}>{title}</h1>
         </div>
-        <div className="flex items-center gap-5">
+        <div className="flex items-start gap-5 ">
           {autorImg ? (
             <div className=" flex items-center gap-3">
               <img
