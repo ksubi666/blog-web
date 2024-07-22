@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { AllBlogContent } from '../constants.js/index.js';
 import { LoadMore } from './LoadMore.js';
 import { Post } from './Post.js';
@@ -22,13 +23,17 @@ export const AllBlogPost = ({ postTag }) => {
       <div className={styles.textContainer}>
         <h1 className={styles.header}>All Blog Post</h1>
         {postTag ? (
-          <div className="flex gap-5 [&>*:first-child]:text-[#D4A373] cursor-pointer">
-            {postTag.map((el) => (
-              <p className={styles.tag} onClick={Click}>
-                {el}
-              </p>
-            ))}
-            <p className={`w-[100%]  text-right ${styles.tag}`}>View All</p>
+          <div className="flex cursor-pointer justify-between items-center text-center">
+            <div className="[&>*:first-child]:text-[#D4A373] flex  gap-5 ">
+              {postTag.map((el) => (
+                <p className={styles.tag} onClick={Click}>
+                  {el}
+                </p>
+              ))}
+            </div>
+            <Link to="/Blog" className={`text-right ${styles.tag}`}>
+              <p>View All</p>
+            </Link>
           </div>
         ) : null}
       </div>
