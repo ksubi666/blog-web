@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { AllBlogContent } from '../constants.js/index.js';
+import { AllBlogContent, AllBlogPostTag } from '../constants.js/index.js';
 import { LoadMore } from './LoadMore.js';
 import { Post } from './Post.js';
 const styles = {
@@ -7,7 +7,7 @@ const styles = {
   textContainer:
     'flex flex-col w-[1216px] gap-8 text-[#495057] font-bold self-strech',
   header: 'font-bold text-2xl leading-7 text-[#181A2A]',
-  tag: 'text-[#495057] text-xs font-bold leading-6',
+  tag: 'text-[#495057] text-xs font-bold leading-6 hover:text-[#D4A373]',
   postContainer: 'flex flex-wrap w-[1216px] gap-5',
   button:
     'py-3 px-5 items-center rounded-[6px] border-[#696A754D] border-[1px] mb-[80px]',
@@ -15,7 +15,7 @@ const styles = {
 
 export const AllBlogPost = ({ postTag }) => {
   const Click = () => {
-    console.log('hello');
+    console.log('kk');
   };
 
   return (
@@ -24,7 +24,7 @@ export const AllBlogPost = ({ postTag }) => {
         <h1 className={styles.header}>All Blog Post</h1>
         {postTag ? (
           <div className="flex cursor-pointer justify-between items-center text-center">
-            <div className="[&>*:first-child]:text-[#D4A373] flex  gap-5 ">
+            <div className="flex  gap-5 ">
               {postTag.map((el) => (
                 <p className={styles.tag} onClick={Click}>
                   {el}
@@ -39,8 +39,14 @@ export const AllBlogPost = ({ postTag }) => {
       </div>
       {postTag ? (
         <div className={styles.postContainer}>
-          {AllBlogContent.map((el) => (
-            <Post img={el.img} tag={el.tag} title={el.title} date={el.date} />
+          {AllBlogContent.map((el, index) => (
+            <Post
+              key={index}
+              img={el.img}
+              tag={el.tag}
+              title={el.title}
+              date={el.date}
+            />
           ))}
         </div>
       ) : (

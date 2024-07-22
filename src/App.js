@@ -5,11 +5,11 @@ import {
   ContactPage,
   ErrorPage,
   HomePage,
+  ScrollToTop,
 } from './components';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { BasicLayout } from './layout/BasicLayout';
-import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
