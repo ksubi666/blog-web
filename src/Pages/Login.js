@@ -25,15 +25,15 @@ export const Login = () => {
   };
   const Usernames = user.map((el) => el.user.username);
   const handlerClick = () => {
-    console.log(user.map((el) => el.user.username));
-    Usernames.map((el) =>
-      el === name && el === pass
-        ? (setMassege('login saccess'),
-          setToHome('/Home'),
-          setLogin('Login'),
-          console.log(el, 'username'))
-        : setMassege('Wrong Username Password')
-    );
+    const found = Usernames.find((el) => el === name);
+    if (found === pass) {
+      setMassege('login success');
+      setToHome('/Home');
+      setLogin('Login');
+      return;
+    } else {
+      setMassege('Wrong Username or Password');
+    }
   };
   return (
     <div className=" w-[500px] h-[500px] flex flex-col items-center justify-center gap-5 rounded-xl border-[#E8E8EA] border-[1px]">
