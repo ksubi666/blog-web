@@ -6,9 +6,11 @@ import { Link } from 'react-router-dom';
 export const Login = () => {
   const [user, setUser] = useState([]);
   useEffect(() => {
-    axios.get(process.env.BACKEND).then((response) => {
-      setUser(response.data);
-    });
+    axios
+      .get(`${process.env.REACT_APP_BACKEND_ENDPOINT}/articles`)
+      .then((response) => {
+        setUser(response.data);
+      });
   }, []);
   const [pass, setPass] = useState('');
   const [name, setName] = useState('');

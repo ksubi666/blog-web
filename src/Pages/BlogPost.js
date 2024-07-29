@@ -12,9 +12,11 @@ export const BlogPost = () => {
   const { id } = useParams();
   const [data, setData] = useState({});
   useEffect(() => {
-    axios.get(`${process.env.BACKEND}/${id}`).then((response) => {
-      setData(response.data);
-    });
+    axios
+      .get(`${process.env.REACT_APP_BACKEND_ENDPOINT}/${id}`)
+      .then((response) => {
+        setData(response.data);
+      });
   }, [id]);
   function createMarkup() {
     return { __html: data.body_html };

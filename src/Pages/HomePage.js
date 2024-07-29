@@ -7,9 +7,11 @@ export const HomePage = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    axios.get(process.env.BACKEND).then((response) => {
-      setData(response.data);
-    });
+    axios
+      .get(`${process.env.REACT_APP_BACKEND_ENDPOINT}/articles`)
+      .then((response) => {
+        setData(response.data);
+      });
   }, []);
 
   return (
