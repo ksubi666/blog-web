@@ -18,9 +18,11 @@ export const Navbar = () => {
   const [searchText, setSearchText] = useState([]);
   const navigate = useNavigate();
   useEffect(() => {
-    axios.get('https://dev.to/api/articles').then((response) => {
-      setSearchText(response.data);
-    });
+    axios
+      .get(`${process.env.REACT_APP_BACKEND_ENDPOINT}/articles`)
+      .then((response) => {
+        setSearchText(response.data);
+      });
   }, []);
   const [text, setText] = useState('');
 
