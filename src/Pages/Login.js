@@ -26,13 +26,13 @@ export const Login = () => {
   const Usernames = user.map((el) => el.user.username);
   const handlerClick = () => {
     console.log(user.map((el) => el.user.username));
-    Usernames.map((el, i) =>
-      el[i] === name && el[i] === pass
+    Usernames.map((el) =>
+      el === name && el === pass
         ? (setMassege('login saccess'),
           setToHome('/Home'),
           setLogin('Login'),
-          console.log(el))
-        : setMassege('Wrong  Username or Password!!!')
+          console.log(el, 'username'))
+        : setMassege('Wrong Username Password')
     );
   };
   return (
