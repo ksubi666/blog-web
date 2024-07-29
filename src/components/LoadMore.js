@@ -1,10 +1,10 @@
-export const LoadMore = () => {
+export const LoadMore = ({ onclick }) => {
   const style = {
     button:
-      'py-3 px-5 items-center rounded-[6px] border-[#696A754D] border-[1px] mb-[80px] cursor-pointer hover:font-medium hover:shadow-md',
+      'py-3 px-5 items-center rounded-[6px] border-[#696A754D] border-[1px] cursor-pointer hover:font-medium hover:shadow-md',
   };
   return (
-    <div>
+    <div onClick={onclick}>
       <button className={style.button}>Load More</button>
     </div>
   );

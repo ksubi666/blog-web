@@ -1,7 +1,7 @@
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { AllBlogContent } from '../constants.js';
 import { useState } from 'react';
 import { CarouselContent } from './CarouselContent.js';
+import { useNavigate } from 'react-router-dom';
 const styles = {
   section: 'max-w-[1200px] overflow-hidden',
   sliderContainer: ' flex transition-transform duration-500 ease-out',
@@ -9,17 +9,21 @@ const styles = {
   button:
     'size-10 rounded-md border-[1px] border-solid border-[#696A75] flex items-center justify-center',
 };
-export const Carousel = () => {
+export const Carousel = ({ Content }) => {
   const [current, setCurrent] = useState(0);
+  const navigate = useNavigate();
   const leftClick = () => {
-    if (current > 0) {
-      setCurrent(current === AllBlogContent.length - 1 ? 0 : current - 1);
+    if (current >= 0) {
+      setCurrent(current === Content.length - 1 ? 0 : current - 1);
     }
   };
   const rightClick = () => {
-    if (current < AllBlogContent.length - 1) {
-      setCurrent(current === AllBlogContent.length - 1 ? 0 : current + 1);
+    if (current <= Content.length - 1) {
+      setCurrent(current === Content.length - 1 ? 0 : current + 1);
     }
+  };
+  const handlePostClick = (id) => {
+    navigate(`/Post/${id}`);
   };
   return (
     <div className={styles.section}>
@@ -27,12 +31,13 @@ export const Carousel = () => {
         className={styles.sliderContainer}
         style={{ transform: `translateX(-${current * 100}%)` }}
       >
-        {AllBlogContent.map((el) => (
+        {Content.map((el, i) => (
           <CarouselContent
-            img={el.img}
-            tag={el.tag}
+            onClick={() => handlePostClick(el.id)}
+            img={el.social_image}
+            tag={el.tag_list[0]}
             title={el.title}
-            date={el.date}
+            date={el.published_at}
           />
         ))}
       </div>

@@ -1,25 +1,31 @@
 import { Card } from './Card';
-import { AllBlogContent, content } from '../constants.js';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 const styles = {
-  container: 'flex flex-col gap-[30px] items-start w-[1231px]',
+  container:
+    'flex flex-col gap-[30px] items-start w-[1231px] hover:cursor-pointer',
   header: 'text-2xl font-bold text-[#181A2A]',
   cardContainer: 'flex flex-row gap-5 text-[#ffffff]',
 };
 
-export const Trending = () => {
+export const Trending = ({ Content }) => {
+  const navigate = useNavigate();
+  const handlePostClick = (id) => {
+    navigate(`/Post/${id}`);
+  };
+  const CardContent = Content.slice(10, 14);
   return (
-    <Link to="/BlogPost" className={styles.container}>
+    <div className={styles.container}>
       <h2 className={styles.header}>Trending</h2>
       <div className={styles.cardContainer}>
-        {content.map((el, index) => (
+        {CardContent.map((el, index) => (
           <Card
-            image={AllBlogContent[index].img}
-            tag={AllBlogContent[index].tag}
-            title={AllBlogContent[index].title}
+            onClick={() => handlePostClick(el.id)}
+            image={el.cover_image}
+            tag={el.tag_list[0]}
+            title={el.title}
           />
         ))}
       </div>
-    </Link>
+    </div>
   );
 };
